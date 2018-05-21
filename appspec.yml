@@ -3,6 +3,9 @@ os: linux
 files:
   - source: /wp-content
     destination: /var/www/html/wp-content
+permissions:
+  - object: /wp-content/uploads
+    except: /wp-content/uploads
 hooks:
   BeforeInstall:
     - location: deploy/before_install
