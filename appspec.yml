@@ -3,6 +3,8 @@ os: linux
 files:
   - source: /wp-content
     destination: /var/www/html/wp-content
+permissions:
+  - exclude: /wp-content/wp-uploads
 hooks:
   BeforeInstall:
     - location: deploy/before_install
